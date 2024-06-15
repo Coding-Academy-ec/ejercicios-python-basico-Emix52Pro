@@ -3,7 +3,7 @@ import math
 # 1. Imprimir Nombre
 def imprimir_nombre(nombre=None):
     if nombre is None:
-        nombre = input("Ingrese su nombre: ")
+        nombre = input()
     print(nombre)
     return nombre
 
