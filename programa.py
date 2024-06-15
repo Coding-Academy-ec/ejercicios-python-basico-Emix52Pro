@@ -1,81 +1,103 @@
-# 1 Escribe un programa en Python que imprima tu nombre en la pantalla.
-def imprimir_nombre():
-    # Aquí se imprime el nombre en la pantalla
+import math
 
-if __name__ == "__main__":
-    # Se llama a la función imprimir_nombre() para ejecutarla
+# 1. Imprimir Nombre
+def imprimir_nombre(nombre=None):
+    if nombre is None:
+        nombre = input("Ingrese su nombre: ")
+    print(nombre)
+    return nombre
 
-# 2 Escribe un programa que calcule la suma de los números del 1 al 10.
+# 2. Suma de los Números del 1 al 10
 def suma_1_al_10():
-    suma = sum(range(1, 11))  # Se utiliza la función sum() para calcular la suma del rango del 1 al 10
-    # Se devuelve el resultado de la suma
+    suma = sum(range(1, 11))
+    print(suma)
+    return suma
 
-if __name__ == "__main__":
-    resultado = suma_1_al_10()  # Se llama a la función suma_1_al_10() para obtener el resultado
-    # Se imprime el resultado de la suma
-
-# 3 Crea variables para almacenar tu edad, nombre y estatura, e imprímelas en pantalla.
+# 3. Datos Personales
 def imprimir_datos_personales(nombre, edad, estatura):
-    # Se imprimen en pantalla los datos personales recibidos como argumentos
+    print("Nombre: " + nombre)
+    print("Edad: " + str(edad))
+    print("Estatura: " + str(estatura))
 
-if __name__ == "__main__":
-    # Se definen las variables con los datos personales
-    nombre = "Tu nombre"
-    edad = 30
-    estatura = 1.75
-    # Se llama a la función imprimir_datos_personales() para mostrar los datos
-
-# 4 Escribe un programa que determine si un número ingresado por el usuario es par o impar.
-def par_o_impar(numero):
-    # Se verifica si el número es divisible por 2
-        # Si es divisible, se devuelve "par"
+# 4. Par o Impar
+def par_o_impar(numero=0):
+    if numero == 0:
+        num = int(input("Ingrese un número: "))
+        if num % 2 == 0:
+            print("par")
+            return "par"
+        else:
+            print("impar")
+            return "impar"
     else:
-        # Si no es divisible, se devuelve "impar"
+        if numero % 2 == 0:
+            print("par")
+            return "par"
+        else:
+            print("impar")
+            return "impar"
 
-if __name__ == "__main__":
-    num = int(input("Ingrese un número: "))  # Se solicita al usuario que ingrese un número
-    print(par_o_impar(num))  # Se imprime si el número ingresado es par o impar
-
-# 5 Crea una función que calcule el área de un círculo dado su radio.
-import math
-
+# 5. Área de un Círculo
 def area_circulo(radio):
-    area = math.pi * radio ** 2  # Se calcula el área del círculo utilizando la fórmula matemática
-    # Se devuelve el área calculada
+    area = math.pi * radio ** 2
+    print("Área del círculo:", area)
+    return area
 
-if __name__ == "__main__":
-    radio = float(input("Ingrese el radio del círculo: "))  # Se solicita al usuario que ingrese el radio del círculo
-    # Se imprime el área calculada del círculo
-
-# 6 Define una función que reciba dos números como argumentos y devuelva su suma.
+# 6. Suma de Dos Números
 def suma(a, b):
-    # Se devuelve la suma de los dos números recibidos como argumentos
+    resultado = a + b
+    print("La suma es:", resultado)
+    return resultado
 
-if __name__ == "__main__":
-    num1 = int(input("Ingrese el primer número: "))  # Se solicita al usuario que ingrese el primer número
-    # Se solicita al usuario que ingrese el segundo número
-    print("La suma es:", suma(num1, num2))  # Se imprime la suma de los dos números ingresados
+# 7. Área de un Círculo con Parámetro
+def area_circulo_param(radio):
+    area = math.pi * radio ** 2
+    print("El área del círculo es:", area)
+    return area
 
-# 7 Modifica la función que calcula el área del círculo para que reciba el radio como parámetro.
-import math
-
-def area_circulo(radio):
-    area = math.pi * radio ** 2  # Se calcula el área del círculo utilizando la fórmula matemática
-    # Se devuelve el área calculada
-
-if __name__ == "__main__":
-    radio = float(input("Ingrese el radio del círculo: "))  # Se solicita al usuario que ingrese el radio del círculo
-    print("El área del círculo es:", area_circulo(radio))  # Se imprime el área calculada del círculo
-
-# 8 Diseña un programa que convierta grados Celsius a Fahrenheit y viceversa, utilizando funciones para realizar los cálculos.
+# 8. Conversión de Temperatura
 def celsius_a_fahrenheit(celsius):
-    return (celsius * 9/5) + 32  # Se aplica la fórmula de conversión de Celsius a Fahrenheit
+    fahrenheit = (celsius * 9/5) + 32
+    print("Temperatura en Fahrenheit:", fahrenheit)
+    return fahrenheit
 
 def fahrenheit_a_celsius(fahrenheit):
-    # Se aplica la fórmula de conversión de Fahrenheit a Celsius
+    celsius = (fahrenheit - 32) * 5/9
+    print("Temperatura en Celsius:", celsius)
+    return celsius
 
 if __name__ == "__main__":
-    celsius = float(input("Ingrese la temperatura en grados Celsius: "))  # Se solicita al usuario que ingrese la temperatura en grados Celsius
-    print("Temperatura en Fahrenheit:", celsius_a_fahrenheit(celsius))  # Se imprime la temperatura convertida a grados Fahrenheit
-    # Se solicita al usuario que ingrese la temperatura en grados Fahrenheit
-    print("Temperatura en Celsius:", fahrenheit_a_celsius(fahrenheit))  # Se imprime la temperatura convertida a grados Celsius
+    # Ejecución de cada ejercicio
+    print("\n1. Imprimir Nombre")
+    imprimir_nombre()
+
+    print("\n2. Suma de los Números del 1 al 10")
+    suma_1_al_10()
+
+    print("\n3. Datos Personales")
+    nombre = "Gabriel"
+    edad = 20
+    estatura = 1.6
+    imprimir_datos_personales(nombre, edad, estatura)
+
+    print("\n4. Par o Impar")
+    par_o_impar()
+
+    print("\n5. Área de un Círculo")
+    radio = float(input("Ingrese el radio del círculo: "))
+    area_circulo(radio)
+
+    print("\n6. Suma de Dos Números")
+    a = int(input("Ingrese el primer número: "))
+    b = int(input("Ingrese el segundo número: "))
+    suma(a, b)
+
+    print("\n7. Área de un Círculo con Parámetro")
+    radio = float(input("Ingrese el radio del círculo: "))
+    area_circulo_param(radio)
+
+    print("\n8. Conversión de Temperatura")
+    celsius = float(input("Ingrese la temperatura en grados Celsius: "))
+    celsius_a_fahrenheit(celsius)
+    fahrenheit = float(input("Ingrese la temperatura en grados Fahrenheit: "))
+    fahrenheit_a_celsius(fahrenheit)
