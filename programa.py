@@ -1,11 +1,12 @@
 import math
 
 # 1. Imprimir Nombre
-def imprimir_nombre(nombre=None):
-    if nombre is None:
-        nombre = input()
-    print(nombre)
-    return nombre
+def imprimir_nombre(nombre="Diego Saavedra"):
+    if (__name__ == "__main__"):
+        nombre = input("Ingrese su nombre: ")
+    else:
+        print(nombre)
+        return nombre
 
 # 2. Suma de los Números del 1 al 10
 def suma_1_al_10():
