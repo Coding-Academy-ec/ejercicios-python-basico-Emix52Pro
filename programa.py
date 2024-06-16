@@ -1,10 +1,8 @@
 import math
 
 # 1. Imprimir Nombre
-def imprimir_nombre(nombre="Diego Saavedra"):
-    if (__name__ == "__main__"):
-        nombre = input("Ingrese su nombre: ")
-    else:
+def imprimir_nombre():
+        nombre = input()
         print(nombre)
         return nombre
 
